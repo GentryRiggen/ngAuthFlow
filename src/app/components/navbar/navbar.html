@@ -1,0 +1,15 @@
+<nav class="navbar" ng-controller="NavbarCtrl">
+
+   <a ui-sref="main">ngAuthFlow</a>
+     
+  <ul>
+      <li><a ui-sref="admin">Admin</a></li>
+      <li><a ui-sref="pro">Pro</a></li>
+      <li><a ui-sref="basic">Basic</a></li>
+      <li><a ui-sref="home">Public</a></li>
+  </ul>
+  <ul style="float: right">
+      <li ng-if="currentUser"><a>{{currentUser.firstName}} - ROLES: <span ng-repeat="role in currentUser.roles">{{role}} &nbsp;</span></a></li></li>
+      <li><a href="#" ng-click="reload()">Randomize User</a></li>
+  </ul>
+</nav>
